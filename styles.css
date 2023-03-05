@@ -1,0 +1,190 @@
+/*
+====================
+Variables
+====================
+*/
+:root {
+    /* colors */
+    --light-gold: rgb(243, 178, 12);
+    --dark-gold: rgb(218, 165, 34);
+    --dark-orange: rgb(190, 126, 6);
+    --black-sd: rgba(0, 0, 0, 1);
+    --black-trans: rgba(0, 0, 0, 0.5);
+    --gray-text: rgb(83, 81, 81);
+    --gray-dark-bg: rgb(235, 227, 227);
+    --gray-light-bg: hsl(210, 36%, 96%);
+    --white: rgb(255, 255, 255);
+    /*others*/
+    --spacing-sm: 0.1rem;
+    --spacing-lg: 0.25rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --border: 1px solid black;
+}
+
+/*
+====================
+Global styles
+====================
+*/
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    line-height: 1.25;
+    font-size: 1rem;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+h1,
+h2,
+h3,
+h4 {
+    letter-spacing: var(--spacing-sm);
+    text-transform: capitalize;
+    line-height: 1.25;
+}
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.25rem;
+}
+h4 {
+    font-size: 0.875rem;
+}
+img {
+    width: 100%;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+html {
+    scroll-behavior: smooth;
+}
+.btn {
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+@media screen and (min-width: 800px) {
+    h1 {
+      font-size: 4rem;
+    }
+    h2 {
+      font-size: 2.5rem;
+    }
+    h3 {
+      font-size: 1.75rem;
+    }
+    h4 {
+      font-size: 1rem;
+    }
+    body {
+      font-size: 1.05rem;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+      line-height: 1;
+    }
+}
+
+/*
+====================
+custom styles
+====================
+*/
+body {
+    background: ;
+    color: var(--gray-text);
+}
+
+
+.header {
+    background: ;
+    color: ;
+    display: flex;
+    justify-content: center;
+    font-size: 4rem;
+    border-bottom: var(--border);
+}
+
+section {
+    display: grid;
+    place-items: center;
+    padding: 20px 0;
+}
+
+.turn, button{
+    margin: 10px;
+    margin-bottom: 35px;
+    padding: 5px 30px;
+    font-size: 2rem;
+}
+
+.gameboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 10px;
+    border: 2px solid gray;
+    background: white;
+}
+
+.box {
+    border: var(--border);
+    padding: 50px;
+    position: relative;
+}
+.box:hover {
+    cursor: pointer;
+}
+
+.box span {
+    position: absolute;
+    padding-top: 10px;
+    width: 100%;
+    height: 100%;
+    color: black;
+    top: 0;
+    left: 0;
+    text-align: center;
+    font-size: 3.5rem;
+}
+
+footer {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+@media screen and (min-width: 665px) {
+    .header{
+        font-size: 6rem;
+    }
+    .turn, button{
+        font-size: 3rem;
+    }
+    .box{
+        padding: 70px;
+    }
+    .box span {
+        padding-top: 20px;
+        font-size: 4.5rem;
+    }
+}
+
